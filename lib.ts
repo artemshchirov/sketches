@@ -46,7 +46,7 @@ export async function loadModule(module: SketchModule): Promise<SketchConstructo
 }
 
 export const screensaver = async (canvas: HTMLCanvasElement) =>
-  (await import("./sketches/2024/screensaver")).default(canvas)
+  (await import("./sketches/gallery/2024/screensaver")).default(canvas)
 
 export const initRenderer = async <C extends ICanvas>(params?: Partial<RenderParams<C>>) =>
   (await import("./library/core/renderer")).init(params)
