@@ -105,7 +105,7 @@ import { webgl } from "library/core/sketch"
 import { initUI } from "library/core/ui"
 import { globalPreamble } from "library/drawing/shaders"
 // import constructor from "sketches/gallery/2023/loop"
-import constructor from "sketches/art/first"
+import constructor from "sketches/art/process"
 import {
   Arrays,
   createBufferInfoFromArrays,
@@ -115,12 +115,14 @@ import {
   setUniforms,
 } from "twgl.js"
 
-const defaultSizeParams = { resolution: 1, width: 1250, height: 1250 }
+const IS_SHOW_MENU = false
+
+const defaultSizeParams = { resolution: 1, width: 2048, height: 1150 }
 const renderer = await init<HTMLCanvasElement>()
 const sketch = constructor(renderer, defaultSizeParams)
 document.body.appendChild(sketch.canvas)
 
-const ui = initUI(sketch, defaultSizeParams)
+const ui = IS_SHOW_MENU ? initUI(sketch, defaultSizeParams) : undefined
 const runner = new SketchRunner(sketch, { ui })
 runner.start()
 
