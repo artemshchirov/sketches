@@ -36,9 +36,22 @@ Build a library bundle
 pnpm build
 ```
 
+To preview the build locally
+
+```bash
+pnpm preview
+```
+
 Entry point is `<root>/lib.ts`. It exports all finished artworks along with a `Sketch` class for embedding sketches in pages
 
-**TODO:** Generate JSDoc
+### Type checking and linting
+
+Check the codebase for type errors and automatically fix lint issues
+
+```bash
+pnpm typecheck
+pnpm lint
+```
 
 ## Directory structure
 
