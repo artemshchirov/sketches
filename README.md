@@ -38,7 +38,7 @@ pnpm build
 
 Entry point is `<root>/lib.ts`. It exports all finished artworks along with a `Sketch` class for embedding sketches in pages
 
-**TODO:** Generate JSDoc
+Documentation for the public API is available in the [`docs`](docs/README.md) directory.
 
 ## Directory structure
 
